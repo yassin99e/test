@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=primary'
+      - 'MYSQL_PASSWORD=root'
+      - 'MYSQL_ROOT_PASSWORD=root'
+      - 'MYSQL_USER=yassine'
+    ports:
+      - '3309:3306'
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=secondary'
+      - 'POSTGRES_PASSWORD=root'
+      - 'POSTGRES_USER=root'
+    ports:
+      - '5435:5432'
